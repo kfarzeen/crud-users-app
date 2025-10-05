@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>edit username page</title>
+    </head>
+    <body>
+        <p>you are about to edit this user  &nbsp; <%=users.email %></p>
+        <form method="POST" action="/user/<%= users.id %>?_method=PATCH">
+            <textarea name="username"><%= users.username %></textarea>
+            <input type="password" name="password" placeholder="enter password">
+            <button>Edit</button>
+        </form>
+        
+    </body>
+</html>
